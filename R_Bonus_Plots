@@ -1,3 +1,5 @@
+### Load necessary R packages
+## Note: requires R Version 4.0.0 at least, as well as Rtools4
 library(ggplot2)
 library(Matrix)
 library(rjson)
@@ -10,6 +12,7 @@ library(dplyr)
 library(hdf5r)
 library(data.table)
 
+### Write spatial mapping function
 geom_spatial <-  function(mapping = NULL,
                           data = NULL,
                           stat = "identity",
