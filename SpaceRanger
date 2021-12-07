@@ -1,16 +1,17 @@
+# Unpack both SpaceRanger and relevant genome reference into suitable location
 sudo tar -xzvf spaceranger-1.3.1.tar.gz.tar
 sudo tar -xzvf refdata-gex-mm10-2020-A.tar.gz
 
+
+# Set path to spaceranger and confirm correct assembly
 export PATH=/mnt/g/spaceranger-1.3.1:$PATH
 spaceranger sitecheck > sitecheck.txt
 
-testrun --id=tiny
-
+# Set path to spaceranger and run test. Should return successful completion
 export PATH=/mnt/g/spacerange-1.3.1:$PATH
 spaceranger testrun --id=tiny
 
-cp -r Images /mnt/g
-
+# Run spaceranger, set arguments to match sample
 spaceranger count --id=GeX-Test-A1 \
 --transcriptome=/mnt/g/refdata-gex-mm10-2020-A \
 --fastqs=/mnt/g/RAW \
@@ -20,4 +21,5 @@ spaceranger count --id=GeX-Test-A1 \
 --area=A1 \
 --loupe-alignment=/mnt/g/Images/V10L27-055-A1.json
 
-cp -r ./GeX_testrun_A1 /mnt/e/Bioinformatics/Visium\ data/
+# Export output to final location
+cp -r ./GeX_testrun_A1 /path/to/Visium\ data/
