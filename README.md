@@ -15,6 +15,10 @@ https://support.10xgenomics.com/spatial-gene-expression/software/downloads/lates
 
 ## R for data plotting
 
+### Version control
+
+R analysis requires at least R version 4.0.0, Rtools4, and RStudio (at least 1.2.5042)
+
 ### Packages required
 
 - ggplot2
