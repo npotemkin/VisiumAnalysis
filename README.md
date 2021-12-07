@@ -12,6 +12,12 @@ Pipeline available from:
 
 https://support.10xgenomics.com/spatial-gene-expression/software/downloads/latest
 
+Input requirement:
+
+- folder containing Illumina paired reads (R1 & R2) for each sample
+- - .fastq files with naming conventions [SampleName]_S1_L00\[LaneNumber]\_[ReadNumber]_001.fastq.gz
+- folder containing .tif files of scope images and .json alignment files from Loupe Browser manual alignment
+- Slide Serial number and Slide area for each sample
 
 ## R for data plotting
 
@@ -42,3 +48,8 @@ R analysis requires at least R version 4.0.0, Rtools4, and RStudio (at least 1.2
 - hdf5r
 
 - data.table
+
+
+### Input requirements
+
+Output files from SpaceRanger pipeline
